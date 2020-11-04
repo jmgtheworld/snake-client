@@ -22,6 +22,9 @@ const handleUserInput = function(conn) {
 
   stdin.on('data', (data) => {
     if (data === '\u0003') process.exit();
+    if (data === 't') {
+      conn.write("Say: snakeeeeee");
+    }
     if (data === 'w') {
       conn.write("Move: up");
     }
