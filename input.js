@@ -12,9 +12,10 @@ const setupInput = function() {
 }
 
 const handleUserInput = function() {
+  const stdin = process.stdin;
   stdin.on('data', (data) => {
     if (data === '\u0003') process.exit();
   });
 }
 
-module.export = {setupInput};
+module.exports = {setupInput};
